@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/failure.dart';
+import '../../../../../../core/failure.dart';
 
 class ErrorView extends StatelessWidget {
   const ErrorView({required this.failure, required this.onRetry, super.key});

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import '../../../../core/failure.dart';
+import '../../../../../../core/failure.dart';
 import '../../domain/carbon_intensity.dart';
 
 sealed class CarbonIntensityState extends Equatable {

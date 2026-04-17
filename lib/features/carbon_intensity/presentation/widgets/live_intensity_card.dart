@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/intensity_band_theme.dart';
+import '../../../../../../core/theme/app_colors.dart';
+import '../../../../../../core/theme/intensity_band_theme.dart';
 import '../../domain/carbon_intensity.dart';
 
 class LiveIntensityCard extends StatelessWidget {

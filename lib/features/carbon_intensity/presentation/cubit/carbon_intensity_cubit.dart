@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/failure.dart';
-import '../../../../core/result.dart';
+import '../../../../../../core/failure.dart';
+import '../../../../../../core/result.dart';
 import '../../data/carbon_intensity_repository.dart';
 import '../../domain/carbon_intensity.dart';
 import 'carbon_intensity_state.dart';
