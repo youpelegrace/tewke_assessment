@@ -9,6 +9,7 @@ import 'features/carbon_intensity/data/carbon_intensity_api.dart';
 import 'features/carbon_intensity/data/carbon_intensity_repository.dart';
 import 'features/carbon_intensity/presentation/cubit/carbon_intensity_cubit.dart';
 import 'features/carbon_intensity/presentation/pages/dashboard_page.dart';
+import 'features/carbon_intensity/presentation/pages/launch_page.dart';
 
 class CarbonIntensityApp extends StatefulWidget {
   const CarbonIntensityApp({super.key});
@@ -38,19 +39,19 @@ class _CarbonIntensityAppState extends State<CarbonIntensityApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Carbon intensity',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light(),
-      darkTheme: AppTheme.dark(),
-      home: BlocProvider<CarbonIntensityCubit>(
-        create: (_) {
-          final CarbonIntensityCubit cubit = CarbonIntensityCubit(_repository);
-          unawaited(cubit.load());
-          cubit.startAutoRefresh();
-          return cubit;
-        },
-        child: const DashboardPage(),
+    final CarbonIntensityRepository repository = CarbonIntensityRepository(
+      api: CarbonIntensityApi(client: http.Client()),
+    );
+
+    return BlocProvider(
+      create: (_) => CarbonIntensityCubit(repository)
+        ..load()
+        ..startAutoRefresh(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light(),
+        darkTheme: AppTheme.dark(),
+        home: const LaunchPage(),
       ),
     );
   }
