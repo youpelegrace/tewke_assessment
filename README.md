@@ -218,7 +218,7 @@ One side effect is intentional: a user in Tokyo still sees the GB day on a `0-24
 
 ## Future Improvements
 
-Time-boxed out for the submission, but strong next steps would be:
+Requirements for the assessment submission, but strong next steps would be:
 
 - regional intensity via `GET /regional/postcode/{postcode}`
 - a "cleanest window" forecast card using `GET /intensity/{from}/fw24h`
