@@ -170,6 +170,7 @@ flutter test
 
 The visual direction is inferred from `tewke.com`:
 
+- Application runs on both light and dark modes, depending on the phone/emulator theme state
 - Warm off-white foundation (`#F6F4EE`) with white cards, aiming closer to home/lifestyle warmth than cold tech neutrals
 - Deep sage brand accent (`#2F5A3E`) as a sustainability-coded but restrained primary
 - Semantic intensity bands from green through amber to coral, driven by the API's index rather than by brand
