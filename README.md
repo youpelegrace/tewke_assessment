@@ -64,7 +64,7 @@ DashboardPage → CarbonIntensityCubit → CarbonIntensityRepository → CarbonI
 
 - No use cases. The cubit depends directly on the repository because `load()` is effectively the use case. A separate use-case layer would earn its place once multiple features needed to share or compose this logic.
 - No DI framework. One repository and one cubit are instantiated in `app.dart` via constructor injection. `get_it` would be useful in a larger app, but here it would mostly add noise.
-- No code generation. DTOs are written by hand with `fromJson` and `toDomain`. For two response shapes, this keeps setup minimal and the code easy to read in an interview setting.
+- No code generation. DTOs are written by hand with `fromJson` and `toDomain`. For two response shapes, this keeps setup minimal and the code easy to read.
 - `Result<T, Failure>` at the repository boundary instead of exceptions. The error story is explicit and every caller has to handle success and failure paths deliberately.
 - Sealed state with `isRefreshing` on `Loaded`. Pull-to-refresh keeps existing data on screen instead of snapping back to a loading spinner.
 - Flutter-free domain enum. `IntensityIndex` stays in pure Dart, while UI color mapping lives in `core/theme/intensity_band_theme.dart`.
