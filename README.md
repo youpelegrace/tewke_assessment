@@ -46,7 +46,7 @@ lib/
 │   │   └── intensity_index.dart            Pure enum, no Flutter imports
 │   └── presentation/
 │       ├── cubit/                          Cubit + sealed state
-│       ├── pages/                          DashboardPage
+│       ├── pages/                          DashboardPage / LaunchPage
 │       └── widgets/                        LiveIntensityCard, DailyIntensityChart, ...
 ├── app.dart                                MaterialApp + DI wiring
 └── main.dart
